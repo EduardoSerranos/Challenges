@@ -88,17 +88,74 @@ class CoreJava {
         y = false;
         System.out.println("Thank you for using the calculator.");
     }
+    
+    //Challenge calculate 5 test scores:
 
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter 5 test scores: 1:");
+    int score1 = sc.nextInt();
+    System.out.print("2:");
+    int score2 = sc.nextInt();
+    System.out.print("3:");
+    int score3 = sc.nextInt();
+    System.out.print("4:");
+    int score4 = sc.nextInt();
+    System.out.print("5:");
+    int score5 = sc.nextInt();
 
+    System.out.println("If the 5 test scores are: " + score1 + ", " + score2 + ", " + score3 + ", " + score4 + ", " + score5);
+    System.out.println("Then:");
+    System.out.println("");
+    System.out.println("Total: " + (score1 + score2 + score3 + score4 + score5));
+    System.out.println("Average: " + ((score1 + score2 + score3 + score4 + score5) / 5));
+    System.out.println("Highest: " + Math.max(Math.max(Math.max(Math.max(score1, score2), score3), score4), score5));
+    System.out.println("Lowest: " + Math.min(Math.min(Math.min(Math.min(score1, score2), score3), score4), score5));
 
+    System.out.println("Your values were:");
 
+    int[] scores = {score1, score2, score3, score4, score5};
 
+    for(int k = 0; k < scores.length; k++){
+        if(scores[k] >= 90){
+            System.out.println(k + " - A");
+        } else if (scores[k] < 90 && scores[k] >= 75){
+            System.out.println(k + " - B");
+        } else if (scores[k] < 75 && scores[k] >= 60){
+            System.out.println(k + " - C");
+        } else if (scores[k] < 60 && scores[k] >= 50){
+            System.out.println(k + " - D");
+        } else {
+            System.out.println(k + " - F");
+        }
+    }
+    sc.close();
 
+    //Challenge - REPL
 
+    Scanner sc = new Scanner(System.in);
+    System.out.println("1. Check Balance 2. Deposit 3. Withdraw 4. Exit");
+    if (sc.hasNextInt()){
+        int choice = sc.nextInt();
+        int balance = 0;
+        switch (choice){
+            case 1:
+                System.out.println("Your balance is: " + balance);
+                break;
+            case 2:
+                System.out.print("Enter amount to deposit: ");
+                int deposit = sc.nextInt();
+            case 3:
+                System.out.print("Enter amount to withdraw: ");
+                int withdraw = sc.nextInt();
+            case 4:
+                System.out.println("Thank you for using our Banking system.");
+                break;
 
+        }
+    }
 
-
-
+    
+    
 
 
 
