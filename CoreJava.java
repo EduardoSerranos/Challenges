@@ -1,3 +1,4 @@
+package challenges;
 
 class CoreJava {
     public static void main(String[] args) {
