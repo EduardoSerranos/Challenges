@@ -1,8 +1,7 @@
 /////////////////////////////////////////////////////////
 // Daily Challenge 9/3/2026
 /////////////////////////////////////////////////////////
-
-package challenges;
+import java.util.Scanner;
 
 class DailyChallenges {
     public static void main(String[] args) {
@@ -66,6 +65,7 @@ class DailyChallenges {
 
             }
         }
+        sc.close();
 
         // Password Validator Challenge
         
@@ -95,12 +95,12 @@ class DailyChallenges {
                 System.out.println("Password accepted!");
             }
         }
-
+        scanner.close();
         // Word Analyzer Challenge
 
-        Scanner inputScanner = new Scanner(System.in);
+        Scanner sc2 = new Scanner(System.in);
         System.out.print("Enter a word: ");
-        String word = inputScanner.nextLine();
+        String word = sc2.nextLine();
         System.out.println("");
         System.out.println("Characters: " + word.length());
         int vowels = 0;
@@ -127,7 +127,7 @@ class DailyChallenges {
         System.out.println("Consonants: " + consonants);
         System.out.println("Digits: " + digits);
         System.out.println("Spaces: " + spaces);
-
+        sc2.close();
 
     }
 }

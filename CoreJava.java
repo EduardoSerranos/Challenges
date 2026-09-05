@@ -1,4 +1,4 @@
-package challenges;
+import java.util.Scanner;
 
 class CoreJava {
     public static void main(String[] args) {
@@ -133,10 +133,10 @@ class CoreJava {
 
     //Challenge - REPL
 
-    Scanner sc = new Scanner(System.in);
+    Scanner sc2 = new Scanner(System.in);
     System.out.println("1. Check Balance 2. Deposit 3. Withdraw 4. Exit");
-    if (sc.hasNextInt()){
-        int choice = sc.nextInt();
+    if (sc2.hasNextInt()){
+        int choice = sc2.nextInt();
         int balance = 0;
         switch (choice){
             case 1:
@@ -144,16 +144,36 @@ class CoreJava {
                 break;
             case 2:
                 System.out.print("Enter amount to deposit: ");
-                int deposit = sc.nextInt();
+                int deposit = sc2.nextInt();
             case 3:
                 System.out.print("Enter amount to withdraw: ");
-                int withdraw = sc.nextInt();
+                int withdraw = sc2.nextInt();
             case 4:
                 System.out.println("Thank you for using our Banking system.");
                 break;
 
         }
     }
+    sc2.close();
+
+    //DATETIME API
+
+    System.out.println("Date: " + java.time.LocalDateTime.now());
+    System.out.println("Year: " + java.time.LocalDateTime.now().getYear());
+    System.out.println("Month: " + java.time.LocalDateTime.now().getMonth());
+    System.out.println("Day: " + java.time.LocalDateTime.now().getDayOfMonth());
+
+    Scanner sc3 = new Scanner(System.in);
+    System.out.println("Enter your brithday (YYYY-MM-DD): ");
+    String birthday = sc3.nextLine();
+    java.time.LocalDate birthdate = java.time.LocalDate.parse(birthday);
+    System.out.println("You are " + (birthdate.until(java.time.LocalDate.now()).getYears()) + " years old.");
+    sc3.close();
+
+    Scanner sc4 = new Scanner(System.in);
+    System.out.println("Enter your birthdate (YYYY-MM-DD): ");
+    String birthday2 = sc4.nextLine();
+    System.out.println("Days until your next birthday: " + java.time.LocalDate.parse(birthday2).until(java.time.LocalDate.now().plusYears(1)).getDays());
 
     
     
