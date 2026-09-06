@@ -62,7 +62,6 @@ class DailyChallenges {
                 case 8:
                     System.out.println("Goodbye!");
                     break;
-
             }
         }
         sc.close();
