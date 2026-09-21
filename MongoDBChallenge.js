@@ -68,7 +68,7 @@ GadgetGalaxyDB.products.find(
 );
 
 GadgetGalaxyDB.products.find({
-    category: { $in: ["electronics, clothing"]}
+    category: { $in: ["Nvidia, RedDragon"]}
     });
 
 GadgetGalaxyDB.createCollection("orders");
