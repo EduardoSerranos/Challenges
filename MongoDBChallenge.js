@@ -74,7 +74,7 @@ GadgetGalaxyDB.products.find({
 GadgetGalaxyDB.createCollection("orders");
 
 GadgetGalaxyDB.orders.insertOne({
-    productId: ObjectId(""),
+    productId: ObjectId("68d123456789abcdef123456"),
     quantity: 2
 });
 
@@ -83,16 +83,16 @@ GadgetGalaxyDB.orders.aggregate([
         $lookup: {
             from: "products",
             localfield: "productId",
-            foreignField: "_id",
+            foreignfield: "_id",
             as: "product"
         }
     },
     {
         $unwind:"$product"
-    }
+    },
     {
         $project: {
-            _id = 0,
+            _id: 0,
             productName: "$product.name",
             quantity: 1
         }
